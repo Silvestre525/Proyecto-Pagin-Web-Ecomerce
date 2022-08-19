@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Mercado Liebre/Login</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Mercado Liebre//Register</title>
 </head>
+
 <body>
   <header>
     <div>
@@ -18,7 +20,7 @@
     <section class="top-container">
       <!-- Header TOP LOGO -->
       <div class="top-container__logo">
-        <img src="img/logo-mercado-liebre.svg" alt="Logo MercadoLiebre">
+        <a href="/"><img src="img/logo-mercado-liebre.svg" alt="Logo MercadoLiebre"></a>
       </div>
       <!-- Header TOP SEARCH-BAR -->
       <div class="top-container__search-bar">
@@ -62,23 +64,59 @@
     </section>
   </div>
   </header>
-  <main>
-    <main class="main-register">
-      <section class="form-container">
-        <form action="/" method="POST">
-          <div class="form-group">
-            <label class="form-group__name-l" for="email">Ingrese su email</label><br>
-            <input class="form-group__input" type="email" id="user-email" name="user-email" placeholder="Email" required>
+  <main class="main-register">
+    <section class="form-container">
+      <form action="/" method="POST">
+        <div class="form-group">
+          <input  class="form-group__input" type="text" id="full-name" name="full-name" placeholder="Nombre y apellido" minlength="6" required>
+        </div>
+        <div class="form-group">
+          <input class="form-group__input" type="text" id="username" name="username" placeholder="Usuario" minlength="6" required>
+        </div>
+        <div class="form-group">
+          <input class="form-group__input" type="email" id="user-email" name="user-email" placeholder="Email" required>
+        </div>
+        <div class="form-group__b-day">
+          <input class="form-group__input" type="date" id="b-day" name="b-day" required>
+        </div>
+        <div class="form-group">
+          <input class="form-group__input" type="text" id="adress" name="adress" placeholder="Direccion" required>
+        </div>
+        <div class="form-group__user-type">
+          <p>Perfil de usuario</p>
+          <input type="radio" class="form-group__radio" id="user-type" name="user-type" value="comprador">
+          <label class="form-group__name-l" for="comprador">Comprador</label>
+          <input type="radio" class="form-group__radio" id="user-type" name="user-type" value="vendedor">
+          <label class="form-group__name-l" for="vendedor">Vendedor</label>
+        </div>
+        <div class="form-group__user-interest">
+          <p>Intereses</p>
+          <input type="checkbox" class="form-group__checkbox" id="interest" name="interest" value="electro">
+          <label class="form-group__name-l" for="electro">Electro</label><br>
+          <input type="checkbox" class="form-group__checkbox" id="interest" name="interest" value="moda">
+          <label class="form-group__name-l" for="moda">Moda</label><br>
+          <input type="checkbox" class="form-group__checkbox" id="interest" name="interest" value="hogar">
+          <label class="form-group__name-l" for="hogar">Hogar</label><br>
+          <input type="checkbox" class="form-group__checkbox" id="interest" name="interest" value="jugueteria">
+          <label class="form-group__name-l" for="jugueteria">Juguetería</label><br>
+          <input type="checkbox" class="form-group__checkbox" id="interest" name="interest" value="vida-sana">
+          <label class="form-group__name-l" for="vida-sana">Vida sana</label><br>
+        </div>
+        <div class="form-group__user-profile-photo">
+          <p>Elige una foto de perfil</p>
+          <input type="file" class="form-group__file" id="profile-photo" name="profile-photo" value="profile-photo">
+          <label class="form-group__name-l" for="profile-photo"></label><br>
           </div>
           <div class="form-group">
-            <label class="form-group__name-l" for="password"> ingrese su contraseña</label><br>
-            <input class="form-group__input" type="password" id="password" name="password" placeholder="Contraseña" required>
+            <input class="form-group__input" type="password" id="password" name="password" placeholder="Ingrese su contraseña"><br>
+            <input class="form-group__input" type="password" id="repeat-password" name="repeat-password" placeholder="repita su contraseña">
           </div>
           <div class="btn-container">
-            <input class="submit-btn"  type="submit" value="Iniciar sesión">
-            </div>
-        </form>
-      </section>  
+          <input class="submit-btn"  type="submit" value="Enviar">
+          <input class="reset-btn" type="reset" value="Borrar">
+          </div>
+      </form>
+    </section>
   </main>
   <footer>
     <!-- Footer CONTAINER -->
@@ -106,4 +144,5 @@
     <p>Copyright &copy; 1999-2020 MercadoLiebre S.R.L</p>
   </footer>
 </body>
+
 </html>
