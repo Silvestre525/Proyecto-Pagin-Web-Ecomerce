@@ -1,19 +1,19 @@
 {
-  "name": "proyecto-de-pagina-web-ecomerce",
+  "name": "html_css",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1"
   },
+  "keywords": [],
+  "description": "",
   "devDependencies": {
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.16"
   }
 }
