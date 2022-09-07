@@ -11,6 +11,9 @@ routes.get ('/register',controller.registro);
 /* Indico cuando se mostrará el login de mi página */
 routes.get ('/login',controller.login);
 
+/*Carrito*/
+routes.get('/carrito',controller.carrito);
+
 /* Redirecciono al home al completar el formulario del register y del login */
 /*app.post ('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html'))

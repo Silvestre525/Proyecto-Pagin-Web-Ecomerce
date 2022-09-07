@@ -2,13 +2,16 @@ const path = require('path');
 
 const controller = {
     index:(req,res) =>{
-        return res.render('home.ejs');
+        return res.render('home');
     },
     registro:(req,res) =>{
-        return res.render('register.ejs');
+        return res.render('register');
     },
     login:(req,res) =>{
-        return res.render('login.ejs');
+        return res.render('login');
+    },
+    carrito:(req,res)=>{
+        return res.render('carrito');
     }
 }
 
