@@ -27,3 +27,8 @@ app.use("/", routes);
 /* Levanto mi servidor  el process env port lo utilizamos para usar puertos disponibles en heroku*/
 app.listen(process.env.PORT || 3000, () => console.log('Servidor funcionando en 3000'))
 
+//Error 404
+app.use((req,res,next)=>{
+    res.status(404).render("error404");
+  });
+  
