@@ -33,7 +33,17 @@ header {
   background-color: var(--main-yellow);
   padding: 24px;
 }
-
+.is-invalid{
+    color: red;
+    border-color: red;
+}
+.wargins{
+  width:400px;
+  text-align: left;
+  margin: auto;
+  color:red;
+  padding-top:5px;
+}
 /* Header upper */
 
 .top-container {

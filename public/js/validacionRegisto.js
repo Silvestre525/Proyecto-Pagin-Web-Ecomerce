@@ -12,17 +12,31 @@ let fotoPerfil = document.querySelector("#profile-photo");
 let password = document.querySelector("#password");
 let repetirPassword = document.querySelector("#repeat-password");
 
-let arrayInput = [nombre,user,email,fechaNacimiento,direccion,perfilUsuario,intereses,fotoPerfil,password,repetirPassword];
+let arrayInput = [nombre,user,email,fechaNacimiento,direccion,fotoPerfil,password,repetirPassword];
 
+//Agrego el elemento submit a todo el formulario
 formulario.addEventListener("submit",(e)=>{
     entrar = false;
     arrayInput.forEach((input)=>{
         if(input.value == ""){
             input.nextElementSibling.innerHTML = `Este campo es obligatorio!!!`;
+            input.classList.add("wargins");
+            input.classList.add("is-invalid");
         }
         if(entrar = true){
             e.preventDefault();
         }
     });
 
+});
+
+//Recorro mi array de inputs para agregar el evento blur a cada input 
+arrayInput.forEach((input)=>{
+    input.addEventListener("blur",(e)=>{
+        if(input.value == ""){
+            input.nextElementSibling.innerHTML = "No te olvides de completar este campo!!!";
+        }else if(input.value != ""){
+            input.nextElementSibling.innerHTML = "";
+        }
+    });
 });
