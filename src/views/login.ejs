@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/header-footer.css">
   <title>Mercado Liebre/Login</title>
 </head>
+
 <body>
-<%-include('partials/header.ejs')%> 
   <main>
-    <main class="main-register">
-      <section class="form-container">
-        <form action="/" method="POST">
-          <div class="form-group">
-            <label class="form-group__name-l" for="email">Ingrese su email</label><br>
-            <input class="form-group__input" type="email" id="user-email" name="user-email" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-            <label class="form-group__name-l" for="password"> ingrese su contraseña</label><br>
-            <input class="form-group__input" type="password" id="password" name="password" placeholder="Contraseña" required>
-          </div>
-          <div class="btn-container">
-            <input class="submit-btn"  type="submit" value="Iniciar sesión">
-            </div>
-        </form>
-      </section>  
-  </main>
-<%-include('partials/footer.ejs')%> 
+    <section class="form-login">
+      <h4>Ingresar</h4>
+      <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su email">
+      <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+      
+      <label class="container">
+        <label class="recordame">Recordame</label>
+        <input checked="checked" type="checkbox">
+        <div class="checkmark"></div>
+      </label>
+      <button>Entrar</button>
+    </section>
 </body>
+
 </html>

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5;
+}
+
+header {
+    background-color: black;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 5px;
+}
+
+.opaligth {
+    font-size: 20px;
+}
+
+/*Estilo para agregar en javascript*/
+.active {
+    transform: translate(-600px);
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease;
+}
+
+/*Estilos para el icono del menu*/
+.icono-menu {
+    color: #00ff9f;
+    font-size: 2em;
+    padding: 2px;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_menu {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+    padding: 5px 5px;
+    list-style: none;
+}
+
+.nav_menu a {
+    color: #bd00ff;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px;
+    margin: 4px;
+}
+
+/*efecto de animacion*/
+.nav_menu a:hover {
+    background-color: #bd00ff;
+    color: #00ff9f;
+}
+
+header h2:hover {
+    color: #00ff9f;
+}
+
+/*Tablet*/
+@media (min-width:768px) {
+    a {
+        text-decoration: none;
+        color: #bd00ff;
+    }
+
+
+    .icono-menu {
+        display: none;
+    }
+
+
+    .nav_menu {
+        width: 100%;
+        padding: 0.5em;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .nav_menu a {
+        padding: 3px;
+        margin: 4px;
+    }
+
+}

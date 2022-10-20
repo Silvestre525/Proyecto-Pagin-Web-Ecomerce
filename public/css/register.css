@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url(/img/Background-registro.jpg);
+}
+
+.form-register {
+  width: 300px;
+  height: 325px;
+  background-color: #711c91;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 8px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #00ff9f;
+}
+
+.controls {
+  width: 13em;
+  background-color: #d600ff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  border: 1px solid #001eff;
+  font-family: 'calibri';
+  color: white;
+  font-size: 18px;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 40px;
+  color: #091833;
+}
+
+.form-register a {
+  color: #091833;
+  text-decoration: none;
+
+}
+
+.form-register a:hover {
+  color: #0abdc6;
+  text-decoration: underline;
+}
+
+
+.form-register .yatengocuenta {
+  position: relative;
+  top:20px;
+}
+
+/* Boton de Registrar */
+button,
+button::after {
+  position: relative;
+  top: 25px;
+  left: 29px;
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, #00ff9f 5%);
+  border: 0;
+  color: #001eff;
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #001eff;
+  outline: transparent;
+  position: relative;
+}
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "Registrarse";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #bd00ff 3%, #d600ff 5%, #bd00ff 5%);
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #d600ff;
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+
+
+/*laptops*/
+@media (min-width:768px) {
+  .form-register {
+    width: 400px;
+    height: 370px;
+  }
+  .controls{
+    width: 18.5em;
+  }
+  button{
+    position: relative;
+    top:80px;
+    left:75px;
+  }
+  .form-register .terminos{
+    font-size: 12px;
+  }
+  .form-register .yatengocuenta {
+    font-size: 12px;
+    position: relative;
+    top: 7em;
+    right: 1em;
+  }
+}

@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CSS VARIABLES */
+
+:root {
+
+  /*Colors*/
+  --main-yellow: #EAC926;
+  --main-blue: #03264C;
+  --main-black: #1c1c1c;
+  --main-dark-gray: #666;
+  --main-light-blue: #1259c3;
+  --main-light-gray: #ebebeb;
+  --main-white: #fff;
+  --main-green: #39b54a;
+  --main-purpple: #fd00ff;
+
+  /*Font-Sizes*/
+  --main-body-text: 12px;
+  --main-titles: 24px;
+  --main-prices: 18px;
+  --main-discounts: 16px;
+  --main-descriptions: 16px;
+}
+
+
+/* MAIN */
+main {
+  background-image: url(/img/Backgound.jpg);
+  background-size: 1250px;
+}
+
+/* Main banner */
+
+.banner-container > img {
+  width: 100vw;
+  height: 120px;
+}
+
+/* Ultima Visita Container & Ofertas */
+
+.ultima-visita,
+.ofertas {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Sections Titles */
+
+.ultima-visita > h2,
+.ofertas > h2 {
+  color: var(--main-light-gray);
+  padding: 0px;
+}
+
+/* Product Item */
+
+.product-item {
+  background-color: var(--main-light-gray);
+  padding: 12px;
+  position: relative;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.product-item:hover {
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+  transform: scale(1.1);
+}
+
+/* Product Img */
+
+.product-item__img {
+  width: 400;
+}
+
+/* Product img source */
+
+.product-item__img > img {
+  width: 100%;
+  border-bottom: 2px solid var(--main-light-gray);
+}
+
+/* Product Item Info */
+
+.product-item__info {
+  text-align: left;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 12px
+}
+
+/* Product Title */
+
+.product-item__title > h3{
+  font-weight: 200;
+  color: var(--main-dark-gray);
+  opacity: 0;
+  transition: all 0.5s ease;  
+}
+
+.product-item:hover > .product-item__title > h3 {
+  opacity: 1;
+}
+/* Product Truck Icon */
+
+.fa-truck {
+  font-size: 1.5em;
+  color: var(--main-green);
+  border: 1px solid var(--main-green);
+  padding: 6px;
+  border-radius: 50%;
+  position: absolute;
+  right : 20px;
+  bottom: 55px;
+  transition: all 0.5s ease;
+}
+
+.product-item:hover > .product-item__info > i {
+  transform: rotate(-90deg);
+}
+
+/* Product Item Price */
+
+.info-price {
+  font-weight: 600;
+}
+
+/* Product Item Discount */
+
+.info-discount {
+  color: var(--main-green);
+}
+
+
+
+
+
+/* ############################*/
+
+
+/* Responsive Section */
+
+/* Tablets, 768px and up */
+@media (min-width: 768px){
+
+
+/* Right menu gap */
+
+.bottom-container__right-menu > ul > li > a > i {
+  margin-left: 6px;
+}
+
+/* MAIN SECTION */
+
+/* Ajustado el tamaño del banner */
+
+.banner-container > img {
+  height: 150px;
+}
+
+/* Ajustado el contenedor para version tablet */
+.ultima-visita,
+.ofertas {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.banner-container > img {
+  height: 200px;
+}
+
+/* Ajustada la disposicion del titulo */
+
+.ultima-visita > h2,
+.ofertas > h2 {
+  flex-basis: 100%;
+}
+
+/* Ajustado el tamaño de las cajas de la seccion */
+
+.product-item {
+  width: 45%;
+}
+
+/* Ajustado el tamaño del icono */
+
+.product-item__info > i {
+  font-size: 1.3em;
+}
+
+}
+
+/* Desktop, 992px and up */
+@media (min-width: 992px){
+
+
+  /* Ajustado el tamaño de las cajas de cada seccioón */
+
+  .product-item {
+    width: 23%;
+  }
+
+  .banner-container > img {
+    height: 250px;
+  }
+
+  .form-container {
+    width: 600px;
+  } 
+
+  .main-register {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-container {
+    display: flex;
+    gap: 12px;
+  }
+
+}
+
+/* Large Desktop, 1200px and up */
+@media (min-width:1200px){}
+
+/* XXL Desktop, 1400px and up */
+@media (min-width: 1400px) {}

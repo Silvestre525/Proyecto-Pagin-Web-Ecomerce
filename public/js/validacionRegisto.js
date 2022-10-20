@@ -11,24 +11,27 @@ let intereses = document.querySelector(".form-group__user-interest");
 let fotoPerfil = document.querySelector("#profile-photo");
 let password = document.querySelector("#password");
 let repetirPassword = document.querySelector("#repeat-password");
+let parrafo = document.querySelector("#warnings");
 
 let arrayInput = [nombre,user,email,fechaNacimiento,direccion,fotoPerfil,password,repetirPassword];
 
 //Agrego el elemento submit a todo el formulario
 formulario.addEventListener("submit",(e)=>{
     entrar = false;
-    arrayInput.forEach((input)=>{
-        if(input.value == ""){
-            input.nextElementSibling.innerHTML = `Este campo es obligatorio!!!`;
-            input.classList.add("wargins");
-            input.classList.add("is-invalid");
-        }
+    let mensaje = "";
+
+    if(nombre.value.length == ""){
+        inputNombre.classList.add("is-invalid");
+        warnings += `<li>Campo nombre obligatorio.</li>`
+        entrar = true;
+    }
         if(entrar = true){
             e.preventDefault();
+            parrafo.innerHTML = warnings;
         }
     });
 
-});
+
 
 //Recorro mi array de inputs para agregar el evento blur a cada input 
 arrayInput.forEach((input)=>{
