@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+    <link rel="Stylesheet" href="/css/detalle.css" type="text/css">
+    <link rel="stylesheet" href="/css/header-footer.css" >
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/41f3340cce.js" crossorigin="anonymous"></script>
+    <!--Font-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+</head>
+
+<body>
+
+<!--Main-->
+    <main>
+
+        <article class="producto">
+            <section class="imagen-principal">
+                    <img src="/<%=detalle.image %>" alt="Bolsa de friselina con mango">
+            </section>
+            <section class="contenedor-detalle-producto">
+                <div class="info-producto">
+                    <h3 class="nombre"><%= detalle.name%></h3>
+                    <a class="precio"><%= detalle.price %>c/u</a>
+                    <a class="oferta">Ahorrá llevando 250 unidades o más</a>
+                    <p>
+                        <%= detalle.description%>
+                    </p>
+                    
+                </div>
+                <div class="configuracion-producto">
+                    <label>Color de bolsa</label>
+                    <select>
+                        <% for(let i=0;i < stock.length; i++){ %>
+                            <% for(let j=0;j < bolsaColores.length; j++){ %>
+                                <% if(stock[i].idProduct==detalle.id) { %>
+                                    <% if(stock[i].idBagColor == bolsaColores[j].id) { %>
+                                        <option value="<%= bolsaColores[j].id %>"><%= bolsaColores[j].color%></option>
+                                    <% } %>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    </select>
+                    <label>Tamaño</label>
+                        <% for(let i=0;i < tamanios.length; i++){ %>
+                            <% if(tamanios[i].id==detalle.idSize) { %>
+                                    <input type="text" value="<%= tamanios[i].size%>" disabled>
+                            <% } %> 
+                        <% } %>
+                    
+                    <label>Cantidad</label>
+                    <p>Cantidad mínima de compra 100 unidades</p>
+                    <input type="number">
+                    </select>
+                    <button>Agregar al carrito</button>
+                </div>
+            </section>
+        </article>
+       
+        
+
+        
+    </main>
+</body>
+
+</html>

@@ -13,13 +13,17 @@ const routes = require("./routes/index.routes");
 /* Guardo en la variable app la ejecución de la función express */
 const app = express();
 
-//Para usar EJS 
-app.set('views', path.join(__dirname,'./views'));
-app.set('view engine','ejs');
+app.use(express.urlencoded({extend: false}));
 
 
 /* A través de la propiedad static de express establezco los archivos estáticos */
 app.use (express.static(publicPath));
+app.use(express.json()); 
+
+
+//Para usar EJS 
+app.set('views', path.join(__dirname,'./views'));
+app.set('view engine','ejs');
 
 //uso mi rutas
 app.use("/", routes);

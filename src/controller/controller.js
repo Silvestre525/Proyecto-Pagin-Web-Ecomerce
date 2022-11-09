@@ -12,6 +12,12 @@ const controller = {
     },
     carrito:(req,res)=>{
         return res.render('carrito');
+    },
+    detalle:(req,res) =>{
+        return res.render('detalle');
+    },
+    crearUsuario:(req,res) =>{
+        res.send(req.body);
     }
 }
 

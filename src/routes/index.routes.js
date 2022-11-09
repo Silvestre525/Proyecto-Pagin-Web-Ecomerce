@@ -7,12 +7,16 @@ routes.get ('/',controller.index);
 
 /* Indico cuando se mostrará el register de mi página */
 routes.get ('/register',controller.registro);
+routes.post('/register',controller.crearUsuario);
 
 /* Indico cuando se mostrará el login de mi página */
 routes.get ('/login',controller.login);
 
 /*Carrito*/
 routes.get('/carrito',controller.carrito);
+
+/*Detalle del producto*/
+routes.get("/detalle",controller.detalle);
 
 /* Redirecciono al home al completar el formulario del register y del login */
 /*app.post ('/', (req, res) => {

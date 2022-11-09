@@ -31,7 +31,7 @@
 
 /* MAIN */
 main {
-  background-image: url(/img/Backgound.jpg);
+  background-image: url(/img/fondo2.jpg);
   background-size: 1250px;
 }
 
@@ -56,14 +56,14 @@ main {
 
 .ultima-visita > h2,
 .ofertas > h2 {
-  color: var(--main-light-gray);
+  color: black;
   padding: 0px;
 }
 
 /* Product Item */
 
 .product-item {
-  background-color: var(--main-light-gray);
+  background-color: var(--main-white);
   padding: 12px;
   position: relative;
   border-radius: 6px;
