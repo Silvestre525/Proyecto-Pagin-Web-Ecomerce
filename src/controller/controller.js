@@ -17,7 +17,10 @@ const controller = {
         return res.render('detalle');
     },
     crearUsuario:(req,res) =>{
-        res.send(req.body);
+        return res.send({
+            body: req.body,
+            file: req.file
+        });
     }
 }
 
