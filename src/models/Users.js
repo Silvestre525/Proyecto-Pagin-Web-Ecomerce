@@ -31,7 +31,7 @@ const User = {
         return userFound;
     },
 
-    //Buscar al usuario que se quiere loguear por su email o cualquier campo
+    //Buscar al usuario que se quiere loguear por su email o cualquier campo y compara si son iguales
     findByField: function (field, text) {
         let allUser = this.findAll();
         let userFound = allUser.find(oneUser => oneUser[field] === text);

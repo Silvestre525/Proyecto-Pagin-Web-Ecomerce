@@ -14,7 +14,7 @@ routes.get ('/',controller.index);
 /* Indico cuando se mostrará el register de mi página */
 routes.get ('/register',controller.registro);
 //Procesar registro
-routes.post('/register',uploadfile.single('avatar'),validations,controller.crearUsuario);
+routes.post('/register',uploadfile.single('avatar'),validations,controller.ProcesoDeRegistro);
 
 /* Indico cuando se mostrará el login de mi página */
 routes.get ('/login',controller.login);
