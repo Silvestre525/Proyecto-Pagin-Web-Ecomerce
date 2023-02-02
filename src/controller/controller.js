@@ -1,4 +1,5 @@
 const path = require('path');
+const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator')
 
 //Requiero mi modelo
@@ -30,11 +31,13 @@ const controller = {
         }
         //Comenzamos la creacion del usuario
         let userToCreate = {
-            ...req.body
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password,10),
+            avatar: req.file.filename
         }
 
         User.create(userToCreate);
-        return res.send('Ok se guardo el usaurio');
+        return res.redirect('/login');
     }
 }
 

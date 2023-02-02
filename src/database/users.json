@@ -5,5 +5,40 @@
   "apellido": "villar",
   "password": "12345",
   "email": "sofiamilagros@gmail.com"
+ },
+ {
+  "id": 2,
+  "nombre": "Carlos",
+  "apellido": "Villar",
+  "email": "carlos@gmail.com",
+  "password": "123456"
+ },
+ {
+  "id": 3,
+  "nombre": "Carlos",
+  "apellido": "Villar",
+  "email": "carlos@gmail.com",
+  "password": "asdads"
+ },
+ {
+  "id": 4,
+  "nombre": "adddasda",
+  "apellido": "adadadsasd",
+  "email": "adsddsdn@admin.com",
+  "password": "admin"
+ },
+ {
+  "id": 5,
+  "nombre": "lolita",
+  "apellido": "shneider",
+  "email": "loli@gmail.com",
+  "password": "12345"
+ },
+ {
+  "id": 6,
+  "nombre": "Matias",
+  "apellido": "Fernandez",
+  "email": "matifer@gmail.com",
+  "password": "$2a$10$TJtldPrids6NdXdc7fJ4MeEdHckW9.wGrX7hjW83FeEbyTFNXGG/e"
  }
 ]
