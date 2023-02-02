@@ -1,6 +1,9 @@
 const path = require('path');
 const {validationResult} = require('express-validator')
 
+//Requiero mi modelo
+const User = require('../models/Users'); 
+
 const controller = {
     index:(req,res) =>{
         return res.render('home');
@@ -25,8 +28,13 @@ const controller = {
                 oldData:req.body  //Lo que quedo en el req.body ates de darle registrar
             });
         }
+        //Comenzamos la creacion del usuario
+        let userToCreate = {
+            ...req.body
+        }
 
-        return res.send('Ok sin errores, aca podrias añadir una vista');
+        User.create(userToCreate);
+        return res.send('Ok se guardo el usaurio');
     }
 }
 

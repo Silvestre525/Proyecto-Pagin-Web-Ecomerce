@@ -1,6 +1,6 @@
 //Validaciones del Backend
 const {body} = require('express-validator');
-
+const path = require('path');
 
 //Validaciones del Backend
 const validations = [
