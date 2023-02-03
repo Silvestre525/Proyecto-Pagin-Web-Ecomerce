@@ -58,7 +58,36 @@ const controller = {
         return res.redirect('/login');
     },
     ProcesoDeLogin:(req,res) => {
-        
+        //Busco al usuario en mi BD
+        let UserToLogin = User.findByField('email',req.body.email);
+
+        //Si el usuario existe
+        if(UserToLogin){
+            //comparamos nustro passwor encriptado con el que esta en el body
+            let passwordOk = bcryptjs.compareSync(req.body.password,UserToLogin.password);
+
+            //Si los password son iguales
+            if(passwordOk){
+                return res.send('ingresaste');
+            }
+            return res.render('login', {
+				errors: {
+					password: {
+						msg: 'Contraseña incorrecta'
+					},
+                    oldData:req.body
+				}
+			});
+        }
+        //Si no encuentra el email o usuario en la BD
+        return res.render('login', {
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				},
+                oldData:req.body
+			}
+		});
     }
 }
 

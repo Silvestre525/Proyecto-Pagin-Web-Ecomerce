@@ -7,6 +7,7 @@ const path = require('path');
 const uploadfile = require("../middlewares/multer");
 //Importando validaciones backend
 const validations = require("../middlewares/validacionesBackend");
+const { ProcesoDeLogin } = require('../controller/controller');
 
 /* Indico cuando me mostrará el home de mi página */
 routes.get ('/',controller.index);
@@ -18,6 +19,9 @@ routes.post('/register',uploadfile.single('avatar'),validations,controller.Proce
 
 /* Indico cuando se mostrará el login de mi página */
 routes.get ('/login',controller.login);
+
+/*Procesar login*/
+routes.post('/login',controller.ProcesoDeLogin);
 
 /*Carrito*/
 routes.get('/carrito',controller.carrito);

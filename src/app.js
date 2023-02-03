@@ -1,6 +1,7 @@
 /* Importo el módulo express */
 const express = require ('express');
 
+
 /* Importo el módulo nativo path en la variable path */
 const path = require ('path');
 
@@ -12,6 +13,7 @@ const routes = require("./routes/index.routes");
 
 /* Guardo en la variable app la ejecución de la función express */
 const app = express();
+
 
 app.use(express.urlencoded({extend: false}));
 

@@ -8,6 +8,13 @@
 body {
   background: url(/img/Background-registro.jpg);
 }
+.text-danger{
+  position: relative;
+  left: 2.5px;
+  bottom: 4px;
+  font-size: 14px;
+  color:red;
+}
 
 .form-login {
   width: 300px;

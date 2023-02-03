@@ -2,32 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/header-footer.css">
-  <title>Mercado Liebre/Login</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/login.css">
+	<link rel="stylesheet" href="/css/header-footer.css">
+	<title>Mercado Liebre/Login</title>
 </head>
 
 <body>
-  <main>
-    <section class="form-login">
-      <h4>Ingresar</h4>
-      <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su email">
-      <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
-
-      <label class="container">
-        <label class="recordame">Recordame</label>
-        <input checked="checked" type="checkbox">
-        <div class="checkmark"></div>
-      </label>
-      <button>Entrar</button>
-    </section>
+	<form method="POST" action="/login">
+		<section class="form-login">
+			<h4>Ingresar</h4>
+			<input class="controls" type="email" name="email" id="email" placeholder="Ingrese su email">
+			<% if(locals.errors && errors.email){ %>
+				<div class="text-danger">
+					<%=errors.email.msg %> 
+				</div> 
+			<% } %> 
+			<input class="controls" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+			<% if(locals.errors && errors.password){ %>
+				<div class="text-danger">
+					<%= errors.password.msg %>
+				</div>
+				<% } %>
+					<label class="container">
+						<label class="recordame">Recordame</label>
+						<input checked="checked" type="checkbox">
+						<div class="checkmark"></div>
+					</label>
+					<button type="submit">Entrar</button>
+		</section>
+	</form>
 </body>
 
 </html>
