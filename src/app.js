@@ -1,9 +1,19 @@
 /* Importo el módulo express */
 const express = require ('express');
-
-
+/*Requerimos session */
+const session = require('express-session');
 /* Importo el módulo nativo path en la variable path */
 const path = require ('path');
+
+/* Guardo en la variable app la ejecución de la función express */
+const app = express();
+
+//Usamos session y la configuramos
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
 
 //importndo archivos estaticos
 const publicPath = path.resolve(__dirname, '../public');
@@ -11,12 +21,8 @@ const publicPath = path.resolve(__dirname, '../public');
 /*traigo mis rutas para usarlas*/
 const routes = require("./routes/index.routes");
 
-/* Guardo en la variable app la ejecución de la función express */
-const app = express();
-
 
 app.use(express.urlencoded({extend: false}));
-
 
 /* A través de la propiedad static de express establezco los archivos estáticos */
 app.use (express.static(publicPath));

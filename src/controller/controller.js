@@ -58,7 +58,7 @@ const controller = {
         return res.redirect('/login');
     },
     ProcesoDeLogin:(req,res) => {
-        //Busco al usuario en mi BD
+        //Busco al usuario en mi BD y de paso guarda toda la informacion en esa variable UsertoLogin
         let UserToLogin = User.findByField('email',req.body.email);
 
         //Si el usuario existe
@@ -68,7 +68,16 @@ const controller = {
 
             //Si los password son iguales
             if(passwordOk){
-                return res.send('ingresaste');
+                //Pasaremos toda la informacion de los usuarios registrados a session asi, podremos trabajar de manera dinamica nuestra vista de profile con ejs
+                
+                //Elimino la contrasena antes de pasar toda la informacion al session
+                delete UserToLogin.password
+
+                //Pasamos a session toda la inforrmacion sin la contrasena
+                req.session.useLogged = UserToLogin;
+                //Una vez que session tiene toda la info vamos al controllador perfil.
+
+                return res.redirect("/perfil");
             }
             return res.render('login', {
 				errors: {
@@ -88,6 +97,13 @@ const controller = {
                 oldData:req.body
 			}
 		});
+    },
+    perfil:(req,res)=>{
+        return res.render('perfil',{
+            //pasamos al atributo user toda la info que hay en el session, que tiene el usuario logeado.
+            user:req.session.useLogged
+            //Una vez pasada la info nos dirigimos a trabajar en la vista perfil y hacerla dinamica
+        });
     }
 }
 

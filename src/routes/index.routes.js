@@ -29,5 +29,9 @@ routes.get('/carrito',controller.carrito);
 /*Detalle del producto*/
 routes.get("/detalle",controller.detalle);
 
+/*Perfil*/
+routes.get('/perfil/',controller.perfil);
+
+
 
 module.exports = routes;
