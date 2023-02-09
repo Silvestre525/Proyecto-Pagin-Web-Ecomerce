@@ -74,7 +74,7 @@ const controller = {
                 delete UserToLogin.password
 
                 //Pasamos a session toda la inforrmacion sin la contrasena
-                req.session.useLogged = UserToLogin;
+                req.session.userLogged = UserToLogin;
                 //Una vez que session tiene toda la info vamos al controllador perfil.
 
                 return res.redirect("/perfil");
@@ -98,13 +98,13 @@ const controller = {
 			}
 		});
     },
-    perfil:(req,res)=>{
-        return res.render('perfil',{
-            //pasamos al atributo user toda la info que hay en el session, que tiene el usuario logeado.
-            user:req.session.useLogged
-            //Una vez pasada la info nos dirigimos a trabajar en la vista perfil y hacerla dinamica
-        });
-    }
+    perfil: (req, res) => {
+		return res.render('perfil', {
+			//A la variable user le pasamos los valores de session que anteriormente recibieron la informacion de usuario logeado.
+			//y asi con la variable user imprimimos al usuario en la vista con ejs. trabajamos en la vista Userprofile
+			user: req.session.userLogged
+		});
+	}
 }
 
 
