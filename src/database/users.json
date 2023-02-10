@@ -1,16 +1,10 @@
 [
  {
   "id": 1,
-  "nombre": "silvestre",
-  "apellido": "vilar",
-  "email": "silvestre@gmail.com",
-  "password": "$2a$10$E0xwI5iGn/BwwjjTUal78ubM88Wr5U3AeCrY5W12JIDHIG0xfBqSe"
- },
- {
-  "id": 2,
-  "nombre": "carolina",
-  "apellido": "munz",
-  "email": "caro@gmail.com",
-  "password": "$2a$10$5yMmIEu1U3qiC5AlLu4q2.Qv8sK8LClHZy1cKIkh0XCxxONLvVLWW"
+  "nombre": "Sofia",
+  "apellido": "villar",
+  "email": "sofia@gmail.com",
+  "password": "$2a$10$HqT0eGmIPOIuvMH4uzpGNeVq4g/W9i/1S6HlpGnaYIUFO2TN5/6oW",
+  "avatar": "1676070945451-img.jpg"
  }
 ]

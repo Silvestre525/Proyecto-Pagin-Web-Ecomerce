@@ -58,6 +58,7 @@ const controller = {
         return res.redirect('/login');
     },
     ProcesoDeLogin:(req,res) => {
+    
         //Busco al usuario en mi BD y de paso guarda toda la informacion en esa variable UsertoLogin
         let UserToLogin = User.findByField('email',req.body.email);
 
@@ -99,6 +100,7 @@ const controller = {
 		});
     },
     perfil: (req, res) => {
+        //console.log(req.session) para depurar el codigo y ver las propiedades que tre session
 		return res.render('perfil', {
 			//A la variable user le pasamos los valores de session que anteriormente recibieron la informacion de usuario logeado.
 			//y asi con la variable user imprimimos al usuario en la vista con ejs. trabajamos en la vista Userprofile
