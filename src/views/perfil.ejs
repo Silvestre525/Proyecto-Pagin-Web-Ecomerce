@@ -18,7 +18,7 @@
 					<h2>
 						<!--nombre es una propiedad que tiene session y posee el nombre de la etiqueta que usamos en la vista de registro-->
 						<h2>Bienvenid@ <%= user.nombre %> </h2>
-						<img src="/img/avatar/default.png">
+						<img src="/img/avatar/<%=user.avatar  %>">
 						<h3>Correo: <%=user.email %></h3>
 					</h2>
 				</div>

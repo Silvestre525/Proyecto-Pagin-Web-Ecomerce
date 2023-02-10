@@ -6,5 +6,21 @@
   "email": "sofia@gmail.com",
   "password": "$2a$10$HqT0eGmIPOIuvMH4uzpGNeVq4g/W9i/1S6HlpGnaYIUFO2TN5/6oW",
   "avatar": "1676070945451-img.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Sofia",
+  "apellido": "villar",
+  "email": "sofia@gmail.com",
+  "password": "$2a$10$Y5LnpdR2ln9Lg738ykeMQeUXlqD3fykQgMSu1BlOXMaE6mBtWdxzK",
+  "avatar": "1676071207143-img.png"
+ },
+ {
+  "id": 3,
+  "nombre": "Carolina",
+  "apellido": "Munz",
+  "email": "caro@gmail.com",
+  "password": "$2a$10$aM/lBDqTQIgHnK/ipeOM5ed4cWV20FUucqlroMFXa6B4zKoY8B8mO",
+  "avatar": "1676071216899-img.png"
  }
 ]
