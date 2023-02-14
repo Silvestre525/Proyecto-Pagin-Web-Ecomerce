@@ -35,7 +35,7 @@ const controller = {
         let UserInBD = User.findByField('email',req.body.email);
 
         if(UserInBD){
-            res.render('register',{  
+           return res.render('register',{  
                 errors:{
                     email:{
                         msg: "Este email ya esta registrado"

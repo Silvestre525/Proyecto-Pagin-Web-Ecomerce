@@ -1,26 +1,18 @@
 [
  {
   "id": 1,
-  "nombre": "Sofia",
-  "apellido": "villar",
-  "email": "sofia@gmail.com",
-  "password": "$2a$10$HqT0eGmIPOIuvMH4uzpGNeVq4g/W9i/1S6HlpGnaYIUFO2TN5/6oW",
-  "avatar": "1676070945451-img.jpg"
+  "nombre": "Silvestre",
+  "apellido": "Villar",
+  "email": "silvestrevillar02@gmail.com",
+  "password": "$2a$10$nzXw3xJOsYmsXnGSz4Iivuf1fimrx/hR1yhr1eCorvVQra2iCrY/a",
+  "avatar": "1676309763568-img.jpg"
  },
  {
   "id": 2,
   "nombre": "Sofia",
   "apellido": "villar",
   "email": "sofia@gmail.com",
-  "password": "$2a$10$Y5LnpdR2ln9Lg738ykeMQeUXlqD3fykQgMSu1BlOXMaE6mBtWdxzK",
-  "avatar": "1676071207143-img.png"
- },
- {
-  "id": 3,
-  "nombre": "Carolina",
-  "apellido": "Munz",
-  "email": "caro@gmail.com",
-  "password": "$2a$10$aM/lBDqTQIgHnK/ipeOM5ed4cWV20FUucqlroMFXa6B4zKoY8B8mO",
-  "avatar": "1676071216899-img.png"
+  "password": "$2a$10$ldvbjiQVckNzimifq50XDu7UaXcON9Q4pXJd/fC3WcC4Do5SGJzxO",
+  "avatar": "1676336370293-img.jpg"
  }
 ]
