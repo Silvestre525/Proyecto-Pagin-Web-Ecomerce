@@ -5,6 +5,8 @@ const path = require('path');
 
 //importanto guestMiddleware
 const guest = require('../middlewares/guestMidleware');
+//Importando authMidlleware
+const auth = require('../middlewares/authMidlleware');
 //Importando multer
 const uploadfile = require("../middlewares/multer");
 //Importando validaciones backend
@@ -33,7 +35,7 @@ routes.get('/carrito',controller.carrito);
 routes.get("/detalle",controller.detalle);
 
 /*Perfil*/
-routes.get('/perfil/',controller.perfil);
+routes.get('/perfil/',auth,controller.perfil);
 
 
 
