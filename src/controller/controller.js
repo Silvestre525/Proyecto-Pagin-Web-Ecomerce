@@ -106,7 +106,12 @@ const controller = {
 			//y asi con la variable user imprimimos al usuario en la vista con ejs. trabajamos en la vista Userprofile
 			user: req.session.userLogged
 		});
-	}
+	},
+    logout: (req,res)=>{
+        //Borramos todo lo que esta en session
+        req.session.destroy();
+        return res.redirect('/');
+    }
 }
 
 

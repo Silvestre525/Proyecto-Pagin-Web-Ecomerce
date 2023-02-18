@@ -4,9 +4,12 @@ const express = require ('express');
 const session = require('express-session');
 /* Importo el módulo nativo path en la variable path */
 const path = require ('path');
+//Importo Midlleware de aplicacion para mostrar o no botones en el navbar
+const userLogged = require('./middlewares/userLoggedMidlleware');
 
 /* Guardo en la variable app la ejecución de la función express */
 const app = express();
+
 
 //Usamos session y la configuramos
 app.use(session({
@@ -14,6 +17,8 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 }));
+
+app.use(userLogged);
 
 //importndo archivos estaticos
 const publicPath = path.resolve(__dirname, '../public');

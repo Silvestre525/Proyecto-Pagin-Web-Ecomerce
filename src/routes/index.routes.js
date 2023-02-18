@@ -37,6 +37,8 @@ routes.get("/detalle",controller.detalle);
 /*Perfil*/
 routes.get('/perfil/',auth,controller.perfil);
 
+//Logut
+routes.get('/logout/',controller.logout);
 
 
 module.exports = routes;

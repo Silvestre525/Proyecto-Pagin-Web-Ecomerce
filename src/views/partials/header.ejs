@@ -9,9 +9,16 @@
         <i class="fa-sharp fa-solid fa-bars"></i>
       </section>
       <div class="nav_menu">
-        <a href="/login" class="nav-link">Iniciar sesion</a>
-        <a href="/register" class="nav-link">Crear una cuenta</a>
-        <a href="/carrito" class="nav-link">Carrito</a>
+        <!--Si hay alguien en session que me muestre esto, como islogged esta en false no me va a mostrar esto-->
+        <% if(locals.isLogged{%>
+          <a href="/perfil"><Perfil></a> 
+          <a href="/logout/">Logout</a>
+          <a href="/carrito" class="nav-link">Carrito</a>
+        <!--y si no, que me muestre esto otro-->
+        <% }else{ %>
+          <a href="/login" class="nav-link">Iniciar sesion</a>
+          <a href="/register" class="nav-link">Crear una cuenta</a>
+       <% } %>
       </div>
     </div>
   </nav>
