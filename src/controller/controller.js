@@ -78,6 +78,12 @@ const controller = {
                 req.session.userLogged = UserToLogin;
                 //Una vez que session tiene toda la info vamos al controllador perfil.
 
+                /*Proceso paa que fundione el recordame delLogin */
+                //Implementamos cookie y nos peguntamos si viene marcado el tick de recordame
+                if(req.body.recordame){
+                    //seteamos una cookie con el valor de lo que viene en el req.email
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60});
+                } //anda al middleware cookie para saber como sigue
                 return res.redirect("/perfil");
             }
             return res.render('login', {
@@ -108,6 +114,8 @@ const controller = {
 		});
 	},
     logout: (req,res)=>{
+        //Borramos lo que hay en la cookie cuando le damoas al boton logout
+		res.clearCookie('userEmail');
         //Borramos todo lo que esta en session
         req.session.destroy();
         return res.redirect('/');

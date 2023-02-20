@@ -10,8 +10,8 @@
       </section>
       <div class="nav_menu">
         <!--Si hay alguien en session que me muestre esto, como islogged esta en false no me va a mostrar esto-->
-        <% if(locals.isLogged{%>
-          <a href="/perfil"><Perfil></a> 
+        <% if(locals.isLogged){%>
+          <a href="/perfil">Perfil</a>
           <a href="/logout/">Logout</a>
           <a href="/carrito" class="nav-link">Carrito</a>
         <!--y si no, que me muestre esto otro-->

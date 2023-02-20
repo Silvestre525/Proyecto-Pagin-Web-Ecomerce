@@ -4,6 +4,12 @@ const express = require ('express');
 const session = require('express-session');
 /* Importo el módulo nativo path en la variable path */
 const path = require ('path');
+/*Importamos cookies */
+const cookies = require('cookie-parser');
+
+//midlleware para cookie
+const cookieMidlleware = require('./middlewares/cookieMidelware');
+
 //Importo Midlleware de aplicacion para mostrar o no botones en el navbar
 const userLogged = require('./middlewares/userLoggedMidlleware');
 
@@ -17,6 +23,12 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 }));
+
+//Usamos cookies
+app.use(cookies());
+
+//Utilizamos nusetro middelware para implementar la cookie
+app.use(cookieMidlleware);
 
 app.use(userLogged);
 
