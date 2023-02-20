@@ -12,7 +12,7 @@ const validations = [
     body('password').notEmpty().withMessage('No puedes dejar este campo vacio'),
     body('avatar').custom((value,{req})=>{
         let file = req.file;
-        let accepted = ['.jpg','.JPG','.gif','.GIF','.png','.PNG'];
+        let accepted = ['.jpg','.JPG','.gif','.GIF','.png','.PNG','.jpeg','.JPEG'];
         
         if(!file){
             throw new Error ('debe insertar una imagen');

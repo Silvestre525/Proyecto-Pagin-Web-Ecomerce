@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/perfil.css">
 	<link rel="stylesheet" href="/css/footer.css">
 	<link rel="stylesheet" href="/css/header.css">
 	<title>Document</title>
@@ -12,19 +13,22 @@
 
 <body>
 	<%-include('partials/header.ejs')%>
-		<div class="container">
-			<div class="row">
-				<div class="perfil">
-					<h2>
-						<!--nombre es una propiedad que tiene session y posee el nombre de la etiqueta que usamos en la vista de registro-->
-						<h2>Bienvenid@ <%= user.nombre %> </h2>
-						<img src="/img/avatar/<%=user.avatar  %>">
-						<h3>Correo: <%=user.email %></h3>
-					</h2>
-				</div>
-
-			</div>
+	<div class="profile">
+		<div class="profile-header">
+		  <div class="profile-picture">
+			<img src="/img/avatar/<%= user.avatar %>" alt="Profile Picture">
+		  </div>
+		  <h2 class="profile-username"><%=user.nombre  %></h2>
+		  <p class="profile-email">Correo electrónico: <%= user.email %></p>
 		</div>
+		<div class="profile-body">
+		  <h3>Información del perfil</h3>
+		  <p class="profile-birthdate">Fecha de nacimiento: 01/01/2000</p>
+		  <p class="profile-country">País: País de origen</p>
+		  <p class="profile-languages">Idiomas: Idiomas hablados</p>
+		  <p class="profile-interests">Intereses: Intereses del usuario</p>
+		</div>
+	  </div>
 		<%-include('partials/footer.ejs')%>
 </body>
 
